@@ -1,0 +1,19 @@
+.recipe-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+  padding: 20px; /* Padding around the entire grid */
+}
+.recipe-card {
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 0.5s ease-out forwards; /* Play animation */
+  /* animation: fadeOutDown 0.5s ease-out forwards; */
+}
+
+
+/* Add responsiveness for mobile screens */
+@media (max-width: 768px) {
+  .recipe-list {
+    grid-template-columns: 1fr; /* Make cards stack vertically */
+  }
+}

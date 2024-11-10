@@ -1,0 +1,101 @@
+.container {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  background-color: rgba(20, 9, 240, 0.269); /* Slightly translucent card */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333; /* Darker color for readability */
+}
+
+.card-title {
+  color: #f700ff; /* Custom color for the title */
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-body {
+  color: #555; /* Slightly lighter color for the body text */
+}
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover; /* Ensure the image covers the area nicely */
+  }
+  
+  .modal-body {
+    max-height: 600px; 
+    overflow-y: auto; 
+  }
+  
+  .custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1040; 
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px; /* Space below the image */
+  }
+  
+  .modal-title {
+    font-weight: bold;
+  }
+
+/* Styling for "View Details" button with outline */
+.view-details-btn {
+  background-color: transparent; /* Green background */
+  color: #218838; /* White text */
+  border: 2px solid #218838; /* Green outline */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.view-details-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+  color: #ffffff;
+  border-color: #1e7e34; /*Even darker green on hover */
+  /* border: none; */
+}
+
+/* Styling for "Remove from Wishlist" button with outline */
+.remove-btn {
+  background-color:transparent; /* Red background */
+  color: #c82333; /* White text */
+  border: 2px solid #c82333; /* Red outline */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  margin-top: 5px;
+}
+
+.remove-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+  color: #ffffff;
+  border-color: #bd2130; /* Even darker red on hover */
+}
+
+
+
+  @media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-4 {
+        max-width: 100%;
+    }
+}

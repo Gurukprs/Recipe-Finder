@@ -1,0 +1,320 @@
+/* General Styling */
+body, .dashboard-container {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar-dark {
+  background-color: #1f1f1f;
+}
+
+.navbar-brand,
+.btn-outline-light {
+  color: #bb86fc !important;
+}
+
+.btn-outline-light:hover {
+  color: #ffffff !important;
+}
+
+/* Make the overlay-form take up the full viewport height and be scrollable */
+/* Overlay form adjustments to avoid navbar overlap */
+.overlay-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Start from the top to avoid overlap */
+  z-index: 1050; /* High z-index to appear above the navbar */
+  overflow-y: scroll;
+  padding: 60px 10px 10px; /* Top padding to offset navbar height */
+}
+
+/* Ensure modal content does not exceed viewport height */
+.modal-content {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: calc(100vh - 80px); /* Reduced to avoid navbar overlap */
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+  
+.modal-open {
+  overflow: hidden;
+}
+
+.image-preview img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Button Styling */
+.btn {
+  color: #ffffff;
+  background-color: #3700b3;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #6200ee;
+  transform: scale(1.05);
+}
+
+/* Form Group */
+.form-group label {
+  color: #bb86fc;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid #3c3c3c;
+  border-radius: 3px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #bb86fc;
+}
+
+.dashboard-wrapper {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.add-recipe-button {
+  width: 150px;
+  max-width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.add-recipe-button:hover {
+  transform: scale(1.05);
+}
+/* Animation Keyframes */
+@keyframes slideDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInMessage {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Fade-in for Messages */
+.fade-in {
+  animation: fadeInMessage 0.4s ease;
+}
+
+/* Card Styling */
+.col-md-4 {
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 768px) {
+  .container {
+      padding: 0 15px;
+  }
+
+  .col-md-4 {
+      width: 100%;
+  }
+
+  .navbar-brand, .btn-outline-light {
+      font-size: 1.1rem;
+  }
+
+  .modal-content {
+      width: 100%;
+      padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+      font-size: 1rem;
+  }
+
+  .lead {
+      font-size: 0.9rem;
+  }
+
+  .btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+  }
+
+  .modal-content h2 {
+      font-size: 1.5rem;
+  }
+  .modal-content {
+    padding: 15px;
+    max-height: 80vh;
+  }
+}
+
+/* Toast Message Styling */
+.alert {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  animation: fadeInMessage 0.4s ease;
+}
+
+.alert-info {
+  background-color: #3a3a3a;
+  color: #bb86fc;
+}
+
+/* Recipe Cards */
+.recipe-card {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Buttons */
+.btn-primary,
+.btn-danger {
+  background-color: #6200ee;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-danger:hover {
+  background-color: #3700b3;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .dashboard-wrapper {
+      max-width: 900px;
+  }
+}
+
+/* Mobile and tablet adjustments */
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+      padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-wrapper {
+      padding: 0 10px;
+  }
+}
+/* General Styling */
+.dashboard-container {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  padding: 1rem 2rem;
+}
+
+.navbar-logo {
+  margin: 0%;
+  padding: 0%;
+  height: 100px;
+  width: 100px;
+}
+
+.navbar-title {
+  color: #bb86fc;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-outline-light {
+  color: #bb86fc;
+  border-color: #bb86fc;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.btn-outline-light:hover {
+  color: #ffffff;
+  background-color: #6200ee;
+  border-color: #6200ee;
+}
+.logout-btn {
+  padding: 6px 12px; /* Smaller padding for a more compact button */
+  font-size: 0.9rem; /* Reduce font size slightly */
+  color: #bb86fc;
+  border-color: #bb86fc;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.logout-btn:hover {
+  color: #ffffff;
+  background-color: #6200ee;
+  border-color: #6200ee;
+}
+
+/* Responsive adjustments for the navbar */
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 1.25rem;
+  }
+  
+  .navbar-logo {
+    height: 25px;
+    width: 25px;
+  }
+}
