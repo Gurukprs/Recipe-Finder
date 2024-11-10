@@ -25,7 +25,7 @@ const Search = () => {
         procedure: recipe.summary
       }));
 
-      const response = await axios.get(`http://localhost:5000/recipes`, {
+      const response = await axios.get(`https://recipe-finder-zu80.onrender.com/recipes`, {
         params: { label: query, ingredients, timeLimit }
       });
       const mongoData = response.data.map(recipe => ({

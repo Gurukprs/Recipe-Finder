@@ -1,17 +1,18 @@
-/* Style for the container */
+/* Dark Theme Style for the container */
 .Authcontainer {
   max-width: 400px;
-  margin: 80px auto; /* Adds space between the navbar and form */
+  margin: 80px auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #1e1e1e; /* Dark background */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for effect */
+  color: #f9f9f9; /* Light text color */
 }
 
 /* Form Heading */
 h2 {
   text-align: center;
-  color: #333;
+  color: #f1f1f1; /* Lighter color for heading */
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -19,17 +20,20 @@ h2 {
 /* Form labels */
 .form-label {
   font-weight: bold;
-  color: #555;
+  color: #ccc; /* Softer light color */
 }
 
 /* Error message styling */
 .text-danger {
-  color: #d9534f;
+  color: #e57373; /* Softer red for dark theme */
   font-weight: bold;
 }
 
 /* Input fields */
 .form-control {
+  background-color: #333; /* Darker input field */
+  color: #fff;
+  border: 1px solid #555;
   border-radius: 6px;
   padding: 10px;
   font-size: 16px;
@@ -38,23 +42,42 @@ h2 {
 /* Submit Button */
 .btn {
   width: 100%;
-  background-color: #1976d2;
+  background-color: #3a9dff;
   border: none;
   padding: 10px;
   color: #fff;
   font-size: 18px;
   cursor: pointer;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added smooth transition */
 }
 
 .btn:hover {
-  background-color: #125ca9;
+  background-color: #1c7dcc; /* Darker shade on hover */
+  transform: scale(1.02); /* Slight scale effect */
+}
+
+/* Link Style */
+a {
+  color: #930ced; /* Light blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #64b5f6;
 }
 
 /* Responsive adjustments */
 @media (max-width: 576px) {
-  .container {
-    padding: 10px;
+  .Authcontainer {
+    padding: 15px;
+    margin: 50px auto;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .btn {
+    font-size: 16px;
   }
 }

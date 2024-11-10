@@ -21,7 +21,7 @@ const AdminSignup = () => {
     e.preventDefault();
     
     try {
-      const res = await axios.post('http://localhost:5000/admin/signup', formData);
+      const res = await axios.post('https://recipe-finder-zu80.onrender.com/admin/signup', formData);
       setMessage(res.data.message);
     } catch (err) {
       setMessage(err.response?.data?.message || 'Server error');

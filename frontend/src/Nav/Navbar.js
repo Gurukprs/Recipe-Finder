@@ -190,7 +190,8 @@ const NavBar = () => {
     centered
   >
     <Modal.Header closeButton>
-      <Modal.Title id="chatbot-modal-title">ChatBot</Modal.Title>
+      <Modal.Title id="chatbot-modal-title">Cheffi 🤖</Modal.Title>
+      {/* <p>Hi there❕, I'm here chat with you and assist you while u cook🍽️🧑‍🍳. 🤖</p> */}
     </Modal.Header>
     <Modal.Body>
       <ChatBot />

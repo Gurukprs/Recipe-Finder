@@ -29,7 +29,7 @@ const RecipeChatbot = () => {
         {
           model: 'command-xlarge-nightly', // Cohere’s conversational model
           prompt: `User: ${input}\nBot:`, // Setting up a conversational prompt
-          max_tokens: 500, // Adjust token limit as needed
+          max_tokens: 1000, // Adjust token limit as needed
           temperature: 0.7,
         },
         {
@@ -65,12 +65,12 @@ const RecipeChatbot = () => {
   return (
     <div className="chatbot-container">
     <div className="chatbot-header">
-      <h2 className="chatbot-headtext">Recipe Chatbot</h2>
+      <h2 className="chatbot-headtext">Hi there, I'm Cheffi 🤖 ur pesonal AI. I'm here chat with you and assist you while u cook🍽️🧑‍🍳</h2>
     </div>
     <div className="chat-window" ref={chatWindowRef}>
       {chatLog.map((entry, index) => (
         <div key={index} className={`chat-message ${entry.sender}`}>
-        <strong>{entry.sender === 'bot' ? 'Cheffi ' : 'You '}:</strong> {entry.message}
+        <strong>{entry.sender === 'bot' ? 'Cheffi🤖 ' : 'You '}:</strong> {entry.message}
       </div>
 
       ))}

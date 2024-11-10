@@ -1,74 +1,99 @@
-/* signup.css */
-
+/* Dark Theme Styles */
 body {
-    background-color: #f4f7f6;
-    font-family: Arial, sans-serif;
-  }
-  
+  background-color: #121212;
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+.signup-container {
+  max-width: 400px;
+  margin: 10vh auto;
+  padding: 25px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.signup-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.form-group label {
+  color: #b3b3b3;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  background: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #e0e0e0;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6200ea;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #3700b3;
+  transform: scale(1.02);
+}
+
+p {
+  text-align: center;
+  color: #ff1744;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  color: #b3b3b3;
+}
+
+.login-link a {
+  color: #bb86fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  color: #ff80ab;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
   .signup-container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 5vh auto;
   }
-  
+
   h2 {
-    text-align: center;
-    color: #333;
+      font-size: 1.5rem;
   }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
+
   button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+      font-size: 1rem;
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  p {
-    text-align: center;
-    color: #d9534f;
-  }
-  
-  .login-link {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .login-link a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .login-link a:hover {
-    text-decoration: underline;
-  }
-  
+}

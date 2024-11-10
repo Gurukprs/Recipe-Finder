@@ -28,7 +28,7 @@ const Dashboard = () => {
 
   const fetchRecipes = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/recipes');
+      const res = await axios.get('https://recipe-finder-zu80.onrender.com/recipes');
       setRecipes(res.data); // Update recipes state with fetched data
     } catch (error) {
       console.error("Error fetching recipes:", error);
@@ -62,7 +62,7 @@ const Dashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/recipes', formData);
+      const res = await axios.post('https://recipe-finder-zu80.onrender.com/recipes', formData);
       setMessage(res.data.message || 'Recipe saved successfully!');
       fetchRecipes(); // Refresh recipes after adding a new recipe
       handleCloseForm();
@@ -78,7 +78,7 @@ const Dashboard = () => {
 
   const handleDelete = async (recipeId) => {
     try {
-      await axios.delete(`http://localhost:5000/recipes/${recipeId}`);
+      await axios.delete(`https://recipe-finder-zu80.onrender.com/recipes/${recipeId}`);
       setMessage('Recipe deleted successfully!');
       fetchRecipes(); // Refresh recipes after deletion
     } catch (error) {
