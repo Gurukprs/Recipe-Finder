@@ -5,7 +5,7 @@ import './Wishlist.css'; // Your custom styles
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import ParticleBackground from'./search/components/ParticleBackground.jsx';
 
-const apiKey = 'e853d5e10b66414ea825020d21772872'; // Replace with your Spoonacular API key
+const apiKey = 'f3360e0686c44193a58beb56fc43ec34'; // Replace with your Spoonacular API key
 
 const Wishlist = () => {
   const [wishlist, setWishlist] = useState([]);
