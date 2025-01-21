@@ -22,7 +22,7 @@ const Login = () => {
       const userCredential = await signInWithEmailAndPassword(auth, identifier, password);
       const user = userCredential.user;
 
-      const response = await fetch('https://recipe-finder-zu80.onrender.com/api/login', {
+      const response = await fetch('https://recipe-finder-1-3g5t.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
