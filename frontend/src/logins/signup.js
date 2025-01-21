@@ -21,7 +21,7 @@ const Signup = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      const response = await fetch('https://recipe-finder-zu80.onrender.com/api/signup', {
+      const response = await fetch('https://recipe-finder-1-3g5t.onrender.com/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
