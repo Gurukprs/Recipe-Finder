@@ -1,4 +1,4 @@
-const apiKey = 'f3360e0686c44193a58beb56fc43ec34';//'e853d5e10b66414ea825020d21772872';
+const apiKey = '903b9559f53645569bc727e21c4aa157';//'e853d5e10b66414ea825020d21772872';
 export const fetchRecipes = async (query, ingredients, timeLimit) => {
   let searchUrl = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}`;
 
