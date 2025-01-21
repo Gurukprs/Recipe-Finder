@@ -17,7 +17,7 @@ const AdminLogin = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post('https://recipe-finder-zu80.onrender.com/admin/login', formData);
+      const res = await axios.post('https://recipe-finder-1-3g5t.onrender.com/admin/login', formData);
       localStorage.setItem('token', res.data.token);
       navigate('/dash');
     } catch (err) {
