@@ -19,7 +19,7 @@ const Wishlist = () => {
   useEffect(() => {
     const fetchWishlist = async () => {
       try {
-        const response = await axios.get(`https://recipe-finder-zu80.onrender.com/wishlist/${userId}`);
+        const response = await axios.get(`https://recipe-finder-1-3g5t.onrender.com/wishlist/${userId}`);
         setWishlist(response.data);
         fetchRecipeDetails(response.data);
       } catch (error) {
@@ -43,7 +43,7 @@ const Wishlist = () => {
 
   const removeFromWishlist = async (recipeId) => {
     try {
-      await axios.post('https://recipe-finder-zu80.onrender.com/wishlist/remove', { userId, recipeId });
+      await axios.post('https://recipe-finder-1-3g5t.onrender.com/wishlist/remove', { userId, recipeId });
       setWishlist(wishlist.filter(recipe => recipe !== recipeId));
       setRecipeDetails(recipeDetails.filter(recipe => recipe.id !== recipeId));
     } catch (error) {
